@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Summary Report</title>
+</head>
+<body>
+    <h1>Daily Summary Report</h1>
+    <table>
+        <tr>
+            <th>Store ID</th>
+            <th>Date</th>
+            <th>Total Sales</th>
+            <th>Top-Selling Product</th>
+        </tr>
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.store_id }}</td>
+            <td>{{ report.date }}</td>
+            <td>{{ report.total_sales }}</td>
+            <td>{{ report.top_selling_product }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
