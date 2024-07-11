@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Manage Email Addresses</title>
@@ -14,6 +14,31 @@
     <ul>
         {% for email in emails %}
         <li>{{ email.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Email Addresses</title>
+</head>
+<body>
+    <h1>Manage Email Addresses</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Email</button>
+    </form>
+    <ul>
+        {% for email in emails %}
+            <li>{{ email.email }}</li>
         {% endfor %}
     </ul>
 </body>
